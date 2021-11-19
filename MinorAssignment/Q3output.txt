@@ -1,0 +1,4 @@
+Before Swap: 
+a = 10, b = 20 
+After Swap : 
+a = 20, b = 10

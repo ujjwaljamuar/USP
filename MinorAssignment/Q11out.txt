@@ -1,0 +1,1 @@
+side1 = 3, side2 = 4, hypotenuse = 5
