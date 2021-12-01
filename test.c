@@ -1,29 +1,36 @@
 #include <stdio.h>
 
-int main()
+void main()
 {
-    float k = 25;
-    float *ptr;
-    ptr = &k;
-    printf("k = %lf \n", k);
-    printf("address of k using pointer ptr 1 = %p \n",(ptr));
-    printf("value of k using pointer ptr 1 = %lf \n",*(ptr));
-    printf("ptr1 + 1 = %p \n",ptr+1 );
-    printf("*((ptr1 )+ 2) = %lf \n",*(ptr) + 2);
-    char m = 'T';
-    char *ptr2;
-    ptr2 = &m;
-    printf("m = %c \n",m);
-    printf("Address of m ptr1 = %p \n",ptr2);
-    printf("value of m using pointer ptr1 = %c \n",*(ptr2));
-    printf("ptr + 1 = %p \n",ptr2+1);
-    printf("ptr1 + 1 = %u \n",*(ptr2 + 1) );
-    int *m1,n = 77;
-    m1 = &n;
-    *(m1) = 80;
-    printf("m = %p \n",m1);
-    printf("n = %d \n",n);
-    printf("n = %d \n",(*m1)*10);
+    double x[8]={16.0,12.0,6.0,8.0,2.5,12.0,14.0,-54.5};
+    int i = 5;
 
-    return 0;
+    printf("1 %d %.1f \n", 4, x[4]);
+
+    printf("2 %d %.1f \n", i, x[i]);
+
+    printf("3 %.1f \n", x[i] + 1);
+
+    printf("4 \t %.1f \n", x[i+1]);
+
+    printf("5 \t %.1f \n", x[i+i]);
+
+    printf("6 \t %.1f \n", x[2*i]);
+
+    printf("7 \t %.1f \n", x[2*i -3]);
+
+    printf("8 \t %.1f \n", x[(int)x[4]]);
+
+    printf("9 \t %.1f \n ",x[i++]);
+
+    printf("10 \t %.1f \n ",x[--i]);
+
+    x[i-1] = x[i];
+    printf("11 \t %.1f \n",x[i-1]);
+
+    x[i] = x[i+1];
+    printf("12 \t %.1f \n",x[i]);
+
+    printf("13 \t %.1f \n",x[i] -1);
+
 }
