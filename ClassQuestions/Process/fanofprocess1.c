@@ -13,7 +13,7 @@ if(argc != 2){
 	}
 n = atoi(argv[1]);           // convert string into integer.
 for(i = 1;i<n;i++)
-	if((childpid= fork()) <= 0)
+	if((childpid= fork()) == -1)
 		break;
 		
 fprintf(stderr,"%d :process ID: %ld parent Id: %ld , Child ID: %ld \n",i,(long)getpid(),(long)getppid(),(long)childpid);
